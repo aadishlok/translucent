@@ -20,3 +20,4 @@
 6. Having charts highlight the selected department instead of hiding other departments preserves overall context, but may not match user expectations if they expect “filter” to mean “show only this department everywhere.”
 7. Splitting functionality across DenialChart, TranslucentTable, and chart primitives improved testability and reuse, but added some overhead in prop types and wiring, especially as shared state (like the filter) grew.
 8. The util function is focussed on calculating the count of records per type of provided field for simplicity. It can be fleshed out to different forms of computation (like amount aggregation) for different visualizations.
+9. For a production-grade readyness, pagination should be added to the data retreival. It would incurr additional queries to get component data which is kept out of scope due to the nature and timeline of this assignment.
