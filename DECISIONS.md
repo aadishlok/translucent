@@ -19,3 +19,4 @@
 5. Lifting selectedDepartment to a parent component enables coordinated behavior between table and charts, at the cost of slightly tighter coupling and more complex prop wiring than a purely self-contained table. Could use backend-for-frontend solutions like redux to maintain local and global states.
 6. Having charts highlight the selected department instead of hiding other departments preserves overall context, but may not match user expectations if they expect “filter” to mean “show only this department everywhere.”
 7. Splitting functionality across DenialChart, TranslucentTable, and chart primitives improved testability and reuse, but added some overhead in prop types and wiring, especially as shared state (like the filter) grew.
+8. The util function is focussed on calculating the count of records per type of provided field for simplicity. It can be fleshed out to different forms of computation (like amount aggregation) for different visualizations.
